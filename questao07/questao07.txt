@@ -1,0 +1,26 @@
+QUESTÃO 7
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ENUNCIADO:
+
+Assumindo que pulo[] é um vetor do tipo int, quais das seguintes expressões referenciam o valor do terceiro elemento do vetor?
+
+*(pulo + 2);
+*(pulo + 4);
+pulo + 4;
+pulo + 2;
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+RESPOSTA:
+
+pulo[] - vetor do tipo int
+
+*(pulo + 2); - valor contido na posição 2, terceiro elemento.
+*(pulo + 4); - valor contido na posição 4, quinto elemento.
+pulo + 4; - endereço da posição 4, quinto elemento.
+pulo + 2; - endereço da posição 2, terceiro elemento.
+
+Portanto, nesse caso, *(pulo+2) é resposável por desreferenciar a terceira posição, equanto que pulo+2 referencia a terceira posição

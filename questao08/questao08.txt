@@ -1,0 +1,28 @@
+QUESTÃO 8
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ENUNCIADO:
+
+Considerando a declaração int mat[4], *p, x;, quais das seguintes expressões são válidas? Justifique.
+
+p = mat + 1;
+p = mat++;
+p = ++mat;
+x = (*mat)++;
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+RESPOSTA:
+
+p = mat + 1; - Válida
+p = mat++; - Inválida
+p = ++mat; - Inválida
+x = (*mat)++; - Válida
+
+A segunda e a terceira expressões são inválidas pois mat por ser um vetor possui um endereço fixo na memória, assim não é possível realizar 
+operações de incremento e decremento com esse endereço.
+
+Já a primeira e a quarta operações são válidas, pois, na primeira, pega-se o endereço de mat soma-se mais 1 e atribui-se a p, assim p aponta 
+para o segundo elemento de mat. Já a quarta operação aplica-se a desferenciação em mat, acessando assim o seu primeiro elemento e aplicando 
+o encremento, essa operação é válida pois está alterando o conteúdo armazenado em mat e não o seu endereço.

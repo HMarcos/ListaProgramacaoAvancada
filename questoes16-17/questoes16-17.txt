@@ -1,0 +1,21 @@
+QUESTÕES 16 E 17
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ENUNCIADO:
+
+
+
+Utilize a ideia do ponteiro para função pela função qsort() para implementar sua própria função de ordenação. Para isso, sua função deverá receber, 
+entre outros argumentos, um ponteiro para a função de comparação.
+
+Procure na internet mecanismos que possibilitem medir tempos de execução de rotinas computacionais. Geralmente, estas medidas são realizadas 
+com o auxílio de funções em C que lêem a hora no sistema (sistemas Unix e Windows geralmente usam funções diferentes). Utilizando os conhecimentos 
+que você obteve com sua pesquisa, meça os tempos de execução das implementações que você criou para os dois problemas de ordenação anteriores e 
+compare os resultados obtidos.
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+RESPOSTA:
+
+O código encontra-se no arquivo questoes16-17.c

@@ -1,0 +1,16 @@
+QUESTÃO 1
+
+///////////////////////////////////////////////
+
+ENUNCIADO:
+
+Qual a utilidade do aprendizado do uso de ponteiro para aplicações em engenharia?
+///////////////////////////////////////////////
+
+RESPOSTA:
+
+Para programas muito longos, como são geralmente os de engenharia, não é uma boa prática alocar memória estaticamente, 
+sem saber os valores dos parâmetros antes de começar o programa.  Para isso, usa-se ponteiros, 
+para alocar blocos de memória específicos durante o programa a fim de reduzir possíveis esforços computacionais.
+
+///////////////////////////////////////////////

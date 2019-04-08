@@ -1,0 +1,35 @@
+QUESTÃO 2
+
+/////////////////////////////////////////////////
+ENUNCIADO:
+
+Seja o seguinte trecho de programa:
+
+int i=3,j=5;
+int *p, *q;
+p = &i;
+q = &j;
+
+Determine o valor das seguintes expressões:
+
+p == &i;
+*p - *q;
+**&p;
+3 - *p/(*q) + 7;
+
+/////////////////////////////////////////////////
+RESPOSTA:
+
+a)Na primeira expressão temos que p == &i retornará 0 ou 1, haja vista que o operador "==" é um comparador, muito utilizado em estruturas de decisão.
+No caso em questão retornará 1, visto que foi definido no programa que p = &i.
+
+b)Na segunda expressão temos que *p - *q como a subtração dos valores que estão nos respectivos endereços onde os seus ponteiros apontam, 
+então pode ser reescrito como: (valor que está no endereço de i) - (valor que está no endereço de j) = 3 - 5 = -2.
+
+c) A expressão **&p pode ser reescrita como *(*(&p)) em que *(&p) retorna o valor que está armazenado em p, nesse caso o endereço de i, 
+então fazendo *(*(&p)), estamos recuperando o valor que i armazena, ou seja, 3, assim **&p = 3.
+
+d)3 - *p/(*q) + 7 => como a divisão de 3 por 5 da um numero float (0.6) e i e j são declarados como inteiros, a expressão assume valor 0. Logo, a expressão
+ficará somente 3 - 0 + 7 = 10.
+
+////////////////////////////////////////////////////

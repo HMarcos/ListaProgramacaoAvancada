@@ -1,0 +1,74 @@
+QUEST�O 6
+
+/////////////////////////////////////////////////////////////////
+
+ENUNCIADO:
+
+Determine o que será mostrado pelo seguinte programa (compile-o, execute-o e verifique se foram obtidas as respostas esperadas).
+
+int main(void){
+  float vet[5] = {1.1,2.2,3.3,4.4,5.5};
+  float *f;
+  int i;
+  f = vet;
+  printf("contador/valor/valor/endereco/endereco");
+  for(i = 0 ; i <= 4 ; i++){
+    printf("\ni = %d",i);
+    printf("vet[%d] = %.1f",i, vet[i]);
+    printf("*(f + %d) = %.1f",i, *(f+i));
+    printf("&vet[%d] = %X",i, &vet[i]);
+    printf("(f + %d) = %X",i, f+i);
+  }
+}
+
+/////////////////////////////////////////////////////////////////
+
+RESPOSTA:
+
+Serão mostrados 5 loops.
+
+**Considere : antes da seta: resposta; depois da seta: correção**
+
+para:
+
+i=0 
+
+    printf("\ni = %d",i); ------------------ será exibido : i = 0 => correto
+    printf("vet[%d] = %.1f",i, vet[i]); ---- será exibido : vet[0] = 1.1 => correto
+    printf("*(f + %d) = %.1f",i, *(f+i)); -- será exibido : *(f+0) = 1.1 => correto
+    printf("&vet[%d] = %X",i, &vet[i]); ---- será exibido : &vet[0] = (endereço de vet[0]) => correto
+    printf("(f + %d) = %X",i, f+i); -------- será exibido : (f + 0) = (endereço de f+0, posição 0 de vet) => correto
+
+i=1
+
+    printf("\ni = %d",i); ------------------ será exibido : i = 1 => correto
+    printf("vet[%d] = %.1f",i, vet[i]); ---- será exibido : vet[1] = 2.2 => correto
+    printf("*(f + %d) = %.1f",i, *(f+i)); -- será exibido : *(f+1) = 2.2 => correto
+    printf("&vet[%d] = %X",i, &vet[i]); ---- será exibido : &vet[1] = (endereço de vet[1]) => correto
+    printf("(f + %d) = %X",i, f+i); -------- será exibido : (f + 1) = (endereço de f+1, posição 1 de vet) => correto
+
+i=2
+
+   printf("\ni = %d",i); ------------------ será exibido : i = 2 => correto
+    printf("vet[%d] = %.1f",i, vet[i]); ---- será exibido : vet[2] = 3.3 => correto
+    printf("*(f + %d) = %.1f",i, *(f+i)); -- será exibido : *(f+2) = 3.3 => correto
+    printf("&vet[%d] = %X",i, &vet[i]); ---- será exibido : &vet[2] = (endereço de vet[0]) => correto
+    printf("(f + %d) = %X",i, f+i); -------- será exibido : (f + 2) = (endereço de f+2, posição 2 de vet) => correto
+i=3
+
+   printf("\ni = %d",i); ------------------ será exibido : i = 3 => correto
+    printf("vet[%d] = %.1f",i, vet[i]); ---- será exibido : vet[3] = 4.4 => correto
+    printf("*(f + %d) = %.1f",i, *(f+i)); -- será exibido : *(f+3) = 4.4 => correto
+    printf("&vet[%d] = %X",i, &vet[i]); ---- será exibido : &vet[3] = (endereço de vet[0]) => correto
+    printf("(f + %d) = %X",i, f+i); -------- será exibido : (f + 3) = (endereço de f+3, posição 3 de vet) => correto
+
+i=4
+
+    printf("\ni = %d",i); ------------------ será exibido : i = 4 => correto
+    printf("vet[%d] = %.1f",i, vet[i]); ---- será exibido : vet[4] = 5.5 => correto
+    printf("*(f + %d) = %.1f",i, *(f+i)); -- será exibido : *(f+4) = 5.5 => correto
+    printf("&vet[%d] = %X",i, &vet[i]); ---- será exibido : &vet[4] = (endereço de vet[4]) => correto
+    printf("(f + %d) = %X",i, f+i); -------- será exibido : (f + 4) = (endereço de f+4, posição 4 de vet) => correto
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

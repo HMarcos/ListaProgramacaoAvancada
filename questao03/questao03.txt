@@ -1,0 +1,14 @@
+QUESTÃO 3
+///////////////////////////////////////////////////
+
+ENUNCIADO:
+Mostre o que será impresso por programa supondo que i ocupa o endereço 4094 na memória.
+int i=5, *p;
+p = &i;
+printf("%x %d %d %d %d", p,*p+2,**&p,3**p,**&p+4);
+}
+///////////////////////////////////////////////////
+
+RESPOSTA:
+Será mostrado : o endereço armazenado em p, que é o endereço de i na forma unsigned hexadecimal, que é FFE | o valor de i + 2 = 5 + 2= 7 
+| o conteúdo do endereço para o qual p aponta = 5 | o conteúdo de *p, que é i, vezes 3 = 5 * 3 = 15  | o conteúdo do endereço + 4 = 5 + 4 = 9.
