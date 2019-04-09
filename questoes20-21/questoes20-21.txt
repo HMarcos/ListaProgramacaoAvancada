@@ -1,0 +1,31 @@
+QUESTÕES 20 E 21
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ENUNCIADO:
+
+Pesquise na Internet sobre o uso da biblioteca libGC, que implementa um coletor de lixo em C. O processo de instalação dessa biblioteca
+em sistemas Windows pode ser um pouco trabalhoso. Entretanto, em sistemas Unix, a instalação é bem simples, de sorte que se recomenda 
+a resolução desta questão em uma máquina, por exemplo, com Linux instalado. Caso seja usuário Windows e não queira instalar sistemas 
+alternativos em seu computador, use uma ferramenta de virtualização (ex: VirtualBox) para instalar e executar o Linux sem alterar a 
+instalação original de seu computador. Prepare um pequeno programa-exemplo demonstrando como usar a biblioteca.
+
+Com base no programa-exemplo da questão anterior, proponha uma aplicação que permita comparar o desempenho das funções tradicionais de 
+alocação/liberação de memória da linguagem c (malloc/free) com as funções de gerenciamento de memória da biblioteca que você escolheu. 
+A aplicação deverá ser capaz de ressaltar possíveis atrasos de tempo provenientes do coletor de lixo utilizado.
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+RESPOSTA:
+
+Os códigos encontram-se nos arquivos main.c, malloc_free.c, libgc.c
+
+O arquivo main.c é um script que por meio do comando system executa os dois outros arquivos e imprime o tempo gasto por cada método de 
+alocação e desalocação de memória. Ao comparar os tempos entre ambos métodos, percebemos que ao utilizar apenas o malloc e o free temos 
+um desempenho superior do que utilizar a biblioteca libGC com o seu coletor de lixo.
+
+O código de ambos os scripts malloc_free.c e libgc.c consiste em loop executado várias vez em que há alocação de memória para um ponteiro do tipo (int **), em seguida aloca-se
+memória para um ponteiro do tipo (int*). Em seguida a memória presente no segundo ponteiro é realocada para dobrar o seu tamanho, esse bloco 
+de memória é atribuido ao conteudo do primeiro ponteiro do tipo (int**). Usando o malloc é preciso liberar essa memória com o free, no caso da 
+utilização do libGC o coletor de lixo é responsável por limpar a memória.
